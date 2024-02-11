@@ -25,5 +25,6 @@
         "noEmit": true,
         "jsx": "react",
         "strictNullChecks": false
-    }
+    },
+    // "files": ["custom.d.ts"],
 }

@@ -1,5 +1,7 @@
 const typescript = require('@rollup/plugin-typescript');
 const postcss = require('rollup-plugin-postcss');
+const url = require('@rollup/plugin-url')
+const svgr = require("@svgr/rollup")
 const terser = require('@rollup/plugin-terser')
 const dts = require('rollup-plugin-dts');
 const packageJson = require('./package.json')
@@ -20,14 +22,16 @@ module.exports = [
         external: ['react'],
         plugins: [
             typescript({
-                tsconfig: './tsconfig.json'
+                tsconfig: './tsconfig.json',
             }),
             postcss({
-                extract: 'index.css',
+                extract: false,
                 modules: true,
                 use: ['sass'],
                 minimize: true
-            }),
+            }), 
+            url(),
+            svgr(),
             terser()
         ]
     },

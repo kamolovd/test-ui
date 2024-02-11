@@ -1,4 +1,5 @@
 import React, {FC} from 'react';
+import styles from './MyButton.module.scss';
 
 export interface MyButtonInterface {
     color: string;
@@ -8,7 +9,7 @@ export interface MyButtonInterface {
 
 export const MyButton: FC<MyButtonInterface> = ({variant,children, color, ...props}) => {
     return (
-        <button style={{color, width: variant === "small" ? '10%' : '20%', padding: variant === "small" ? '8px' : '16px'}} {...props}>
+        <button className={styles.color} style={{color, width: variant === "small" ? '10%' : '20%', padding: variant === "small" ? '8px' : '16px'}} {...props}>
             {children}
         </button>
     )
