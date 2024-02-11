@@ -1,10 +1,10 @@
 import React from "react";
 import AppGallery from "../../images/app_gallery.svg";
-import AppStore from "../../image/app_store.svg";
-import FB from "../../image/facebook.svg";
-import GooglePlay from "../../image/google_play.svg";
-import IG from "../../image/instagram.svg";
-import TG from "../../image/telegram.svg";
+import AppStore from "../../images/app_store.svg";
+import FB from "../../images/facebook.svg";
+import GooglePlay from "../../images/google_play.svg";
+import IG from "../../images/instagram.svg";
+import TG from "../../images/telegram.svg";
 import styles from "./Footer.module.css";
 
 export function Footer() {
